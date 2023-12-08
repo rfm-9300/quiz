@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.QuestionsActivity">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="top|center"
+        android:padding="16dp">
+
+        <TextView
+
+            android:id="@+id/question_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="normal"
+            tools:text="What country is this flag?"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+        
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/image_flag"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#ffff0000"
+                android:contentDescription="@string/flag_image"
+
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintWidth_percent=".5"
+                app:layout_constraintWidth_default="percent"
+
+                app:layout_constraintHeight_percent=".50"
+                app:layout_constraintHeight_default="percent"
+                tools:srcCompat="@drawable/az" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:max="10"
+                android:minHeight="50dp"
+                android:indeterminate="false"
+                android:progress="9"
+
+                tools:progress="7"/>
+            <TextView
+                android:paddingStart="5dp"
+                android:id="@+id/progress_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="0/10"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"/>
+
+            
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <TextView
+            android:id="@+id/answer_text_view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="normal"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center"
+            tools:text="Option 1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/default_border_bg"/>
+        <TextView
+            android:id="@+id/answer_text_view2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="normal"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center"
+            tools:text="Option 2"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/default_border_bg"/>
+        <TextView
+            android:id="@+id/answer_text_view3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="normal"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center"
+            tools:text="Option 3"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/default_border_bg"/>
+        <TextView
+            android:id="@+id/answer_text_view4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="normal"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center"
+            tools:text="Option 4"
+            android:background="@drawable/default_border_bg"/>
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/check_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/check"
+            android:textSize="20dp"/>
+
+
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</androidx.core.widget.NestedScrollView>
